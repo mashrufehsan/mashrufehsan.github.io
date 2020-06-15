@@ -21,7 +21,12 @@
 
     <script>
       function changeColor() {
-        document.getElementById("changeColor").innerHTML = "Ami tomay bhalobasi :)";
+        let len = userInput.value.length;
+        if(userInput.value[len-1]== "i" &&(userInput.value[len-2]=="s" || userInput.value[len-3]=="s") ){
+          document.getElementById("changeColor").innerHTML = "Ami tomay bhalobasi :)";
+        }
+        else
+          document.getElementById("changeColor").innerHTML = "Ki baal koila !";
       }
     </script>
   </body>

@@ -12,7 +12,7 @@
 
     <input id="userInput" type="text" />
 
-    <button onclick="changeColor()">Tarpore</button>
+    <button onclick="changeColor()" id="myBtn">Tarpore</button>
 
     <p
       id="changeColor"
@@ -20,9 +20,16 @@
     ></p>
 
     <script>
+      let inp = document.getElementById("userInput");
+      inp.addEventListener("keyup",function(event){
+        if(event.keyCode === 13){
+          event.preventDefault();
+          document.getElementById("myBtn").click();
+        }
+      });
       function changeColor() {
         let len = userInput.value.length;
-        if(userInput.value[len-1]== "i" &&(userInput.value[len-2]=="s" || userInput.value[len-3]=="s") ){
+        if(userInput.value[len-1].toUpperCase()== "I" &&(userInput.value[len-2].toUpperCase()=="S" || userInput.value[len-3].toUpperCase()=="S") ){
           document.getElementById("changeColor").innerHTML = "Ami tomay bhalobasi :)";
         }
         else

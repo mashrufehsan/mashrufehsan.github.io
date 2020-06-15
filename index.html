@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My test site</title>
+  </head>
+
+  <body>
+    <h1>Trying to change color of user input</h1>
+
+    <input id="userInput" type="text" />
+
+    <button onclick="changeColor()">Change color to red</button>
+
+    <p
+      id="changeColor"
+      style="color: red; font-size: large; font-weight: bold;"
+    ></p>
+
+    <script>
+      function changeColor() {
+        document.getElementById("changeColor").innerHTML = "Ami tomay bhalobasi :)";
+      }
+    </script>
+  </body>
+</html>
